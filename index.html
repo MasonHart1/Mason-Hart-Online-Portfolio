@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mason Hart's online portfolio</title>
+    <title>Mason Hart's Online Portfolio</title>
     <link rel="stylesheet" href="Styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="https://docs.google.com/document/d/1NO1fLnbKAs3WpqYeAdKn4itIMJJkWUqYtkQv5x9DymA/edit?usp=sharing"
                             target="_blank">My resume</a></li>
@@ -54,7 +54,7 @@
                         <h3>IT Specialist: HTML AND CSS</h3>
                         <p>Issued By Certiport</p>
                         <p class="cert-date">Issued: October 10, 2024</p>
-                        <a href="HTML and CSS.pdf" target="_blank" class="cert-link">View Certificate</a>
+                        <a href="Cert PDF's/HTML and CSS.pdf" target="_blank" class="cert-link">Click to View Certificate</a>
                     </div>
                 </div>
 
@@ -64,10 +64,62 @@
                         <h3>Unity Certified User: Programmer</h3>
                         <p>Issued by Certiport</p>
                         <p class="cert-date">Issued: April 28, 2025</p>
-                        <a href="Programmer.pdf" target="_blank" class="cert-link">View Certificate</a>
+                        <a href="Cert PDF's/Programmer.pdf" target="_blank" class="cert-link">Click to View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <img src="Photos/databasesPic.png" alt="Certification 2" class="cert-image" />
+                    <div class="cert-info">
+                        <h3>IT Specialist: Databases</h3>
+                        <p>Issued by Certiport</p>
+                        <p class="cert-date">Issued: November 21, 2025</p>
+                        <a href="Cert PDF's/Databases.pdf" target="_blank" class="cert-link">Click to View Certificate</a>
                     </div>
                 </div>
 
+                <div class="cert-card">
+                    <img src="Photos/JavascriptPng.png" alt="Certification 2" class="cert-image" />
+                    <div class="cert-info">
+                        <h3>IT Specialist: JavaScript</h3>
+                        <p>Issued by Certiport</p>
+                        <p class="cert-date">Issued: November 21, 2025</p>
+                        <a href="Cert PDF's/JavaScript.pdf" target="_blank" class="cert-link">Click to View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Here are some projects I have worked on</p>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="Photos/unoooo.png" alt="Uno Card Game" class="project-image">
+                    <div class="project-info">
+                        <h3>Singleplayer Uno! Game</h3>
+                        <p>A single-player Uno-style card game with full game logic.</p>
+                        <a href="https://martinezclassroom.com/Projects/ctcuno/index.html" target="_blank" class="project-link">Click me go to game</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="" alt="Uno Card Game" class="project-image">
+                    <div class="project-info">
+                        <h3>Sandbox Voxel Terrain Generator</h3>
+                        <p>A single-player freecam game with voxel generation, includes placing and breaking.</p>
+                        <a href="" target="_blank" class="project-link">Click me go to game</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="" alt="Uno Card Game" class="project-image">
+                    <div class="project-info">
+                        <h3>Singleplayer Uno! Game</h3>
+                        <p>A single-player Uno-style card game with full game logic.</p>
+                        <a href="" target="_blank" class="project-link">Click me go to game</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -103,7 +155,7 @@
             const windowHeight = window.innerHeight;
             const scrollBottom = scrollHeight - (currentScrollPos + windowHeight);
 
-            if (scrollBottom <= 0) {
+            if (scrollBottom <= 1) {
                 navBar.classList.remove("hidden");
             } else if (currentScrollPos > prevScrollPos) {
                 navBar.classList.add("hidden");
@@ -113,18 +165,6 @@
 
             prevScrollPos = currentScrollPos;
         });
-
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener("click", (e) => {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    })
-                }
-            })
-        })
     </script>
 </body>
 
