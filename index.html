@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="" alt="Uno Card Game" class="project-image">
+                    <img src="Photos/Voxels.png" alt="Voxel Generation Template game" class="project-image">
                     <div class="project-info">
                         <h3>Sandbox Voxel Terrain Generator</h3>
                         <p>A single-player freecam game with voxel generation, includes placing and breaking.</p>
@@ -191,6 +191,8 @@
             const windowHeight = window.innerHeight;
             const scrollBottom = scrollHeight - (currentScrollPos + windowHeight);
 
+            console.log(scrollBottom)
+
             if (scrollBottom <= 1) {
                 navBar.classList.remove("hidden");
             } else if (currentScrollPos > prevScrollPos) {
@@ -211,13 +213,12 @@
             const windowHeight = window.innerHeight;
             const scrollBottom = scrollHeight - (currentScrollPos + windowHeight);
 
-            console.log(mouseY)
 
             if (mouseY <= 100 && visible == false) {
                 navBar.classList.remove("hidden")
                 visible = true;
             }
-            else if (mouseY >= 100 && visible == true && scrollBottom != 0) {
+            else if (mouseY >= 100 && visible == true && scrollBottom != 0 && scrollBottom < 2800) {
                 navBar.classList.add("hidden")
                 visible = false;
             }
