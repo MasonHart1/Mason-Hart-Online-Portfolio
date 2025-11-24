@@ -30,8 +30,7 @@
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="https://docs.google.com/document/d/1NO1fLnbKAs3WpqYeAdKn4itIMJJkWUqYtkQv5x9DymA/edit?usp=sharing"
-                            target="_blank">My resume</a></li>
+                    <li><a href="PDF's/Mason Hart Resume.pdf" target="_blank">My resume</a></li>
                 </ul>
             </nav>
         </header>
@@ -54,7 +53,7 @@
                         <h3>IT Specialist: HTML AND CSS</h3>
                         <p>Issued By Certiport</p>
                         <p class="cert-date">Issued: October 10, 2024</p>
-                        <a href="Cert PDF's/HTML and CSS.pdf" target="_blank" class="cert-link">Click to View
+                        <a href="PDF's/HTML and CSS.pdf" target="_blank" class="cert-link">Click to View
                             Certificate</a>
                     </div>
                 </div>
@@ -65,7 +64,7 @@
                         <h3>Unity Certified User: Programmer</h3>
                         <p>Issued by Certiport</p>
                         <p class="cert-date">Issued: April 28, 2025</p>
-                        <a href="Cert PDF's/Programmer.pdf" target="_blank" class="cert-link">Click to View
+                        <a href="PDF's/Programmer.pdf" target="_blank" class="cert-link">Click to View
                             Certificate</a>
                     </div>
                 </div>
@@ -76,7 +75,7 @@
                         <h3>IT Specialist: Databases</h3>
                         <p>Issued by Certiport</p>
                         <p class="cert-date">Issued: November 21, 2025</p>
-                        <a href="Cert PDF's/Databases.pdf" target="_blank" class="cert-link">Click to View
+                        <a href="PDF's/Databases.pdf" target="_blank" class="cert-link">Click to View
                             Certificate</a>
                     </div>
                 </div>
@@ -87,7 +86,7 @@
                         <h3>IT Specialist: JavaScript</h3>
                         <p>Issued by Certiport</p>
                         <p class="cert-date">Issued: November 21, 2025</p>
-                        <a href="Cert PDF's/JavaScript.pdf" target="_blank" class="cert-link">Click to View
+                        <a href="PDF's/JavaScript.pdf" target="_blank" class="cert-link">Click to View
                             Certificate</a>
                     </div>
                 </div>
@@ -183,6 +182,7 @@
 
         let prevScrollPos = window.pageYOffset;
         let navBar = document.querySelector(".navBar");
+        let visible = true;
 
         window.addEventListener('scroll', function () {
             const currentScrollPos = window.pageYOffset;
@@ -201,6 +201,27 @@
 
             prevScrollPos = currentScrollPos;
         });
+
+        window.addEventListener("mousemove", (e) => {
+            let mouseY = e.clientY;
+            const currentScrollPos = window.pageYOffset;
+
+
+            const scrollHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollBottom = scrollHeight - (currentScrollPos + windowHeight);
+
+            console.log(mouseY)
+
+            if (mouseY <= 100 && visible == false) {
+                navBar.classList.remove("hidden")
+                visible = true;
+            }
+            else if (mouseY >= 100 && visible == true && scrollBottom != 0) {
+                navBar.classList.add("hidden")
+                visible = false;
+            }
+        })
     </script>
 </body>
 
