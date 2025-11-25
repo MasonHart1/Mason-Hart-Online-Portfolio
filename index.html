@@ -218,7 +218,7 @@
                 navBar.classList.remove("hidden")
                 visible = true;
             }
-            else if (mouseY >= 100 && visible == true && scrollBottom != 0 && scrollBottom < 2800) {
+            else if (mouseY >= 100 && visible == true && scrollBottom != 0 && !scrollBottom > 2800) {
                 navBar.classList.add("hidden")
                 visible = false;
             }
